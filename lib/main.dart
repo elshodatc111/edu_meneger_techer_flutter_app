@@ -1,5 +1,6 @@
 import 'package:edu_meneger_techer_08_09_2024/screen/home_page.dart';
 import 'package:edu_meneger_techer_08_09_2024/screen/login/login_page.dart';
+import 'package:edu_meneger_techer_08_09_2024/screen/splash/splash_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Edu Meneger',
-      home: LoginPage(),
+      home: SplashPage(),
     );
   }
 }
