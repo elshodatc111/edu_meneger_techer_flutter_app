@@ -1,3 +1,4 @@
+import 'package:edu_meneger_techer_08_09_2024/screen/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -21,6 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
     fetchProfileData();
   }
 
+  final GetStorage storage = GetStorage();
   Future<void> fetchProfileData() async {
     try {
       final GetStorage storage = GetStorage();
@@ -70,7 +72,6 @@ class _ProfilePageState extends State<ProfilePage> {
         Container(
           padding: const EdgeInsets.all(20),
           width: Get.width,
-          color: Color(0xff84016A),
           child: Column(
             children: [
               const CircleAvatar(
@@ -94,7 +95,7 @@ class _ProfilePageState extends State<ProfilePage> {
           child: isLoading
               ? const Center(child: CircularProgressIndicator())
               : ListView(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.only(top: 20.0, left: 40.0 ),
             children: [
               ProfileItem(
                 icon: Icons.email,
@@ -119,6 +120,21 @@ class _ProfilePageState extends State<ProfilePage> {
             ],
           ),
         ),
+        Container(
+          color: Colors.red,
+          margin: const EdgeInsets.only(bottom: 8.0),
+          padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 16.0),
+          child: TextButton(
+            onPressed: (){
+              storage.erase();
+              Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (context) => const SplashPage()), // HomePage sahifasi
+                    (Route<dynamic> route) => false, // Barcha sahifalarni yopadi
+              );
+            },
+            child: const Text("Chiqish",style: TextStyle(color: Colors.white,fontSize: 16.0),),
+          ),
+        )
       ],
     );
   }
