@@ -75,13 +75,20 @@ class _SplashPageState extends State<SplashPage>
         child: Center(
           child: FadeTransition(
             opacity: _fadeAnimation,
-            child: const Text(
-              "Edu Meneger",
-              style: TextStyle(
-                color: Colors.purple,
-                fontSize: 42,
-                fontWeight: FontWeight.w800,
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset('assets/images/logo.png'),
+                const Text(
+                  "Edu Meneger",
+                  style: TextStyle(
+                    color: Color(0xff84016A),
+                    fontSize: 42,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
             ),
           ),
         ),

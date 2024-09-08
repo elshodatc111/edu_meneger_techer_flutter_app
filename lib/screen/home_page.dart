@@ -17,17 +17,17 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _tabs = [
     MainPage(),
     PaymartPage(),
-    ProfelPage(),
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Edu Meneger"),
-        centerTitle: true,
+        leading: Image.asset('assets/images/logo.png',cacheHeight: 30,),
         backgroundColor: Colors.blue,
         titleTextStyle: const TextStyle(
-          color: Colors.white,
+          color: Color(0xff84016A),
           fontWeight: FontWeight.w700,
           fontSize: 24,
         ),
@@ -44,17 +44,17 @@ class _HomePageState extends State<HomePage> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined,color: Colors.white,),
-            activeIcon: Icon(Icons.home_outlined, color: Colors.orange,),
+            activeIcon: Icon(Icons.home_outlined, color: Color(0xff84016A),),
             label: 'Asosiy',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.payment,color: Colors.white,),
-            activeIcon: Icon(Icons.payment, color: Colors.orange,),
+            activeIcon: Icon(Icons.payment, color: Color(0xff84016A),),
             label: 'To\'lovlar',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person,color: Colors.white,),
-            activeIcon: Icon(Icons.person, color: Colors.orange,),
+            activeIcon: Icon(Icons.person, color: Color(0xff84016A),),
             label: 'Profile',
           ),
         ],
