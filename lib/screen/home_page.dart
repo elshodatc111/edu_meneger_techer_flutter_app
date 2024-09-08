@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
         leading: Image.asset('assets/images/logo.png',cacheHeight: 30,),
         backgroundColor: Colors.blue,
         titleTextStyle: const TextStyle(
-          color: Color(0xff84016A),
+          color: Color(0xffffffff),
           fontWeight: FontWeight.w700,
           fontSize: 24,
         ),
